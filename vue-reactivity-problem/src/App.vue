@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import Pokemon from './components/Pokemon.vue';
+import Pokemon from './components/PokemonSolution.vue';
 
 const pokemonIndex = ref(1);
 </script>
@@ -15,7 +15,7 @@ const pokemonIndex = ref(1);
     </a>
   </div>
 
-  <h1>The Vue Composable Reactivity Problem</h1>
+  <h1 class="title">The Vue Composable Reactivity Problem</h1>
 
   <button type="button" @click="pokemonIndex++" @contextmenu.prevent.stop="pokemonIndex--">
     Pokémon index is: {{ pokemonIndex }}
@@ -40,6 +40,10 @@ const pokemonIndex = ref(1);
 
 button {
   margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 6rem;
+}
+
+.title {
+  margin: 0
 }
 </style>
